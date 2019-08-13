@@ -11,4 +11,11 @@
     <hr>
     <a href="/posts/{{$posts->id}}/edit" class="btn btn-outline-dark">Edit</a>
 
+    {{--    <a href="/posts/{{$posts->id}}/destroy" class="btn btn-dark"> Delete</a>--}}
+
+    {!! Form::open(['action' => ['PostsController@destroy' , $posts->id] , 'method'=>'POST' , 'class'=> 'pull-right' ]) !!}
+    {{Form::hidden('_method' , 'DELETE')}}
+    {{Form::submit('Delete', ['class'=>'btn btn-danger'])}}
+    {!! Form::close() !!}
 @endsection
+
