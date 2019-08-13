@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
+
+
+
+Route::get('/' , 'PagesController@index');
+Route::get('/service' , 'PagesController@service');
+Route::get('/about', 'PagesController@about');
+
+//Route::get('posts', 'PostsController');   not Properly work Error full
+Route::resource('posts','PostsController');
