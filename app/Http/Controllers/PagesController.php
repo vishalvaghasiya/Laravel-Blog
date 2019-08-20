@@ -20,4 +20,7 @@ class PagesController extends Controller
         return view('pages.services')->with('titles', $title);
     }
 
+    public function indexhome(){
+        return view('home');
+    }
 }

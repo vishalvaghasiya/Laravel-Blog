@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('container')
     {{--    {{$post}}--}}
     <h1>Edited From</h1>

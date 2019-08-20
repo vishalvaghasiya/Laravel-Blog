@@ -1,3 +1,3 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 <?php echo 'about pages' ?>

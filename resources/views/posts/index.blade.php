@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('container')
 <div>
@@ -11,8 +11,7 @@
                        href="posts/{{$post->id}}">
                     {{$post->title}}
                     </a></h3>
-                <small class="card-body"> {{$post->body}}</small>
-
+                <small class="card-body"> {!! $post->body !!}</small>
             </div>
         @endforeach
 {{--    paginate link() method to access  --}}

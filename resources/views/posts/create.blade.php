@@ -1,7 +1,7 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('container')
-    <h1> Posts Create</h1>
+    <h1 style="margin-top: 0px"> Posts Create</h1>
 
 {{--    {{ Form::open(array('action' => 'PostsController@store')) }}--}}
     {{ Form::open(['action' => 'PostsController@store' , 'method' => 'POST']) }}
@@ -11,7 +11,7 @@
     </div>
     <div class="form-group">
         {{Form::label('body','Body')}}
-        {{Form::textarea('body', '', ['class'=>'form-control' , 'placeholder' => 'Body'])}}
+        {{Form::textarea('body', '', ['id'=>'article-ckeditor' , 'class'=>'form-control' , 'placeholder' => 'Body'])}}
     </div>
 
     {{Form::submit('Submit',['class'=>'btn btn-primary'])}}
